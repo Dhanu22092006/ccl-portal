@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { errMsg } from '../lib/ccl'
 import { getCCLs, getCCL } from '../api/api'
 
 export function useCCLs() {
@@ -9,7 +10,7 @@ export function useCCLs() {
   useEffect(() => {
     getCCLs()
       .then((res) => setData(res.data.data))
-      .catch((err) => setError(err.message))
+      .catch((err) => setError(errMsg(err, 'Unable to load content')))
       .finally(() => setLoading(false))
   }, [])
 
@@ -26,7 +27,7 @@ export function useCCL(slug) {
     setLoading(true)
     getCCL(slug)
       .then((res) => setData(res.data.data))
-      .catch((err) => setError(err.message))
+      .catch((err) => setError(errMsg(err, 'Unable to load content')))
       .finally(() => setLoading(false))
   }, [slug])
 

@@ -5,9 +5,16 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        heading: ['"Playfair Display"', 'Georgia', 'serif'],
+        heading: ['Fraunces', 'Georgia', 'serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
       },
       colors: {
+        moss: { DEFAULT: '#5B6B3A' },
+        paper: { DEFAULT: '#F7F2EA', deep: '#EDE5D8', soft: '#FBF8F3' },
+        ink: { DEFAULT: '#1B2A33', soft: '#44545C', mute: '#6B777C' },
+        sea: { DEFAULT: '#1F5B6B', dark: '#143F4C' },
+        clay: { DEFAULT: '#B4532A', dark: '#8F3F1E' },
+        line: '#DDD3C3',
         'ccl-ocean': { DEFAULT: '#0B4F6C', light: '#1a7a9e', dark: '#083a52' },
         'ccl-forest': { DEFAULT: '#2D6A4F', light: '#52a076', dark: '#1e4a37' },
         'ccl-earth': { DEFAULT: '#6B4226', light: '#9c6344', dark: '#4a2d1a' },
